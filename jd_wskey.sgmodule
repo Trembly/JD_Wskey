@@ -1,0 +1,9 @@
+#!name=京东上传
+#!desc=京东wskey上传(点消息)更新时间2021-10-20
+#!system=ios
+
+[Script]
+京东上传 = type=http-request,pattern=^https:\/\/api\-dd\.jd\.com\/client\.action\?functionId=getSessionLog,requires-body=1,max-size=0,timeout=1000,script-path= https://raw.githubusercontent.com/GiaoCCl/WSCK/main/wskey.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, api-dd.jd.com
